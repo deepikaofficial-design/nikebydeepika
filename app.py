@@ -673,7 +673,7 @@ HTML_TEMPLATE = '''
         }
 
         .icon-item {
-            flex: 0 0 280px;
+            flex: 0 0 80px;
             min-width: 280px;
             cursor: pointer;
         }
