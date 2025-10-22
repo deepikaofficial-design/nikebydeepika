@@ -679,7 +679,7 @@ HTML_TEMPLATE = '''
         }
 
         .icon-image {
-            width: 100%;
+            width: 200px;
             height: 400px;
             object-fit: cover;
             margin-bottom: 12px;
