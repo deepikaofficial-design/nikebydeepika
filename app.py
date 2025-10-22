@@ -1544,10 +1544,13 @@ HTML_TEMPLATE = '''
                     <img src="/static/killshot.png" alt="Killshot" class="icon-image">
                 </a>
                 <a href="#jordans" class="icon-item" data-icon="Jordans" data-image="/static/jordan.png">
-                    <img src="/static/airjordan.png" alt="Jordans" class="icon-image">
+                    <img src="/static/jordan.png" alt="Jordans" class="icon-image">
                 </a>
                 <a href="#metcon" class="icon-item" data-icon="Metcon" data-image="/static/metcon.png">
                     <img src="/static/metcon.png" alt="Metcon" class="icon-image">
+                </a>
+                <a href="P6000" class="icon-item" data-icon="P6000" data-image="/static/P6000.png">
+                    <img src="/static/P6000.png" alt="P6000" class="icon-image">
                 </a>
                 {% endfor %}
             </div>
