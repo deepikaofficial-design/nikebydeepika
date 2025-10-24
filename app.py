@@ -600,7 +600,7 @@ HTML_TEMPLATE = '''
 
         .sports-image {
             width: 100%;
-            height: 400px;
+            height: 600px;
             object-fit: cover;
             margin-bottom: 12px;
         }
@@ -685,7 +685,7 @@ HTML_TEMPLATE = '''
 
         .icon-image {
             width: 100%;
-            height: 320px;
+            height: 400px;
             object-fit: contain;
             margin-bottom: 12px;
         }
