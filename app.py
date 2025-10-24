@@ -507,7 +507,7 @@ HTML_TEMPLATE = '''
         }
 
         .athlete-image:hover {
-            transform: scale(1.05);
+            transform: scale(1.10);
         }
 
         .discover-grid {
@@ -540,7 +540,8 @@ HTML_TEMPLATE = '''
         }
 
         .featured-image:hover {
-            filter: brightness(1.15);
+            opacity: 0.8;
+            
         }
 
         /* Shop Tabs for What's Hot Section */
@@ -618,7 +619,7 @@ HTML_TEMPLATE = '''
         }
 
         .sports-image:hover {
-            filter: brightness(1.15);
+            opacity: 0.8;
         }
 
         .sports-text {
@@ -774,7 +775,6 @@ HTML_TEMPLATE = '''
         }
 
         .nba-image:hover {
-            filter: blur(2px) brightness(1.3);
             opacity: 0.8;
         }
 
@@ -844,114 +844,101 @@ HTML_TEMPLATE = '''
         /* Footer - Responsive */
         .footer-section {
             background-color: white;
-            padding: 40px 40px;
-            margin-top: 200px;
-            border-top: 1px solid #ccc;
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) auto;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-bottom: 40px;
-        }
-
-        .footer-location-column {
-            grid-column: 4;
-            grid-row: 1;
-            justify-self: end;
+            color: white;
+            padding: 0 10px 40px 10px;
+            margin-top: 80px;
+            border-top: 0.3px solid #7A7777;
         }
         
-        .shop-tabs-container {
-                gap: 10px;
-                margin-top: 20px;
-                margin-bottom: 40px;
-            }
-            
-            .shop-tab-button {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        .footer-column-title {
-            font-size: 16px;
-            font-weight: bold;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) 50px;
+            gap: 5px;
+            max-width: 1200px;
+            margin: 0 10px;
             margin-bottom: 20px;
-            color: black;
+            margin-top: 15px;
+            font-weight: bold;
         }
-
+        
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-column-title {
+            font-size: 5px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            letter-spacing: 0.1px;
+            color: black;
+            font-weight: bold;
+            
+        }
+        
         .footer-link {
             color: #7e7e7e;
             text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 10px;
-            display: block;
+            font-size: 5px;
+            margin-bottom: 3px;
+            transition: color 0.3s;
+            font-weight: bold;
+            
         }
-
-        .footer-link:hover {
-            color: black;
+         .footer-link:hover {
             text-decoration: underline;
+            color: black;
         }
-
-        .footer-location-column {
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-end;
-        }
-
+      
+        
+        
         .footer-location {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: black;
+            gap: 1px;
+            font-size: 5px;
+            color: white;
+            margin-top: 10px;
         }
-
+        
         .location-icon {
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
         }
+        
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding-top: 20px;
-            margin-top: 40px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 12px;
+            padding-top: 1px;
+            border-top: none;
+            max-width: 1200px;
+            margin: 0 10px;
+            font-size: 6px;
             color: #7e7e7e;
+            font-weight: bold;
         }
-
+        
         .footer-bottom-left {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap;
+            align-items: center;
         }
-
+        
         .footer-bottom-right {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
-
+        
         .footer-bottom-link {
             color: #7e7e7e;
             text-decoration: none;
+            transition: color 0.3s;
         }
-
-        .footer-bottom-link:hover {
-            color: black;
+           .footer-bottom-link:hover {
             text-decoration: underline;
+            color: black;
         }
 
         /* Popups - Responsive */
@@ -1428,7 +1415,7 @@ HTML_TEMPLATE = '''
     </div>
     
     <div class="slideshow-container">
-        {% for i in range(10) %}
+        {% for i in range(5) %}
         <img src="/static/ssf3.avif" class="slide{% if i == 0 %} active{% endif %}" alt="Slide {{ i*3 + 1 }}">
         <video class="slide" muted playsinline preload="metadata">
             <source src="/static/slideshow2.mp4" type="video/mp4">
@@ -1575,7 +1562,7 @@ HTML_TEMPLATE = '''
             <button class="icons-slider-btn left" onclick="slideIconsLeft()">‹</button>
             <button class="icons-slider-btn right" onclick="slideIconsRight()">›</button>
 <div class="icons-slider" id="iconsSlider">
-                {% for j in range(50) %}
+                {% for j in range(10) %}
                 <a href="#airmax" class="icon-item" data-icon="Air Max" data-image="/static/airmax.png">
                     <img src="/static/airmax.png" alt="Air Max" class="icon-image">
                 </a>
