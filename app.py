@@ -503,11 +503,6 @@ HTML_TEMPLATE = '''
             width: 100%;
             height: 300px;
             object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .athlete-image:hover {
-            transform: scale(1.05);
         }
 
         .discover-grid {
