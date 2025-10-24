@@ -503,6 +503,11 @@ HTML_TEMPLATE = '''
             width: 100%;
             height: 300px;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-image:hover {
+            transform: scale(1.05);
         }
 
         .discover-grid {
@@ -769,7 +774,8 @@ HTML_TEMPLATE = '''
         }
 
         .nba-image:hover {
-            filter: brightness(1.15);
+            filter: blur(2px) brightness(1.3);
+            opacity: 0.8;
         }
 
         .nba-item-title {
@@ -2069,7 +2075,16 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('sportsSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.sports-item').offsetWidth + 8;
-                slider.scrollLeft -= itemWidth * 3;
+                slider.scrollLeft -= itemWidth;
+                updateSliderButtons();
+            }
+        }
+
+        function slideRight() {
+            const slider = document.getElementById('sportsSlider');
+            if (slider) {
+                const itemWidth = document.querySelector('.sports-item').offsetWidth + 8;
+                slider.scrollLeft += itemWidth;
                 updateSliderButtons();
             }
         }
@@ -2112,8 +2127,8 @@ HTML_TEMPLATE = '''
         function slideIconsLeft() {
             const slider = document.getElementById('iconsSlider');
             if (slider) {
-                const itemWidth = document.querySelector('.icon-item').offsetWidth + 8;
-                slider.scrollLeft -= itemWidth * 3;
+                const itemWidth = document.querySelector('.icon-item').offsetWidth + 15;
+                slider.scrollLeft -= itemWidth;
                 updateIconsSliderButtons();
             }
         }
@@ -2121,8 +2136,8 @@ HTML_TEMPLATE = '''
         function slideIconsRight() {
             const slider = document.getElementById('iconsSlider');
             if (slider) {
-                const itemWidth = document.querySelector('.icon-item').offsetWidth + 8;
-                slider.scrollLeft += itemWidth * 3;
+                const itemWidth = document.querySelector('.icon-item').offsetWidth + 15;
+                slider.scrollLeft += itemWidth;
                 updateIconsSliderButtons();
             }
         }
@@ -2167,7 +2182,7 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('nbaSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.nba-item').offsetWidth + 15;
-                slider.scrollLeft -= itemWidth * 3;
+                slider.scrollLeft -= itemWidth;
                 updateNbaSliderButtons();
             }
         }
@@ -2176,7 +2191,7 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('nbaSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.nba-item').offsetWidth + 15;
-                slider.scrollLeft += itemWidth * 3;
+                slider.scrollLeft += itemWidth;
                 updateNbaSliderButtons();
             }
         }
