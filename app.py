@@ -822,7 +822,7 @@ HTML_TEMPLATE = '''
             scroll-behavior: smooth;
             scrollbar-width: none;
             padding: 20px 0;
-            margin-bottom: 150px;
+            margin-bottom: 250px;
         }
 
         .nba-slider::-webkit-scrollbar {
@@ -914,7 +914,7 @@ HTML_TEMPLATE = '''
         .footer-section {
             background-color: white;
             padding: 60px 48px;
-            margin-top: 80px;
+            margin-top: 150px;
             border-top: 1px solid black;
         }
         .footer-content {
