@@ -556,7 +556,7 @@ HTML_TEMPLATE = '''
             border: none;
             cursor: pointer;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: bold;
             border-radius: 50px;
             transition: all 0.3s ease;
         }
@@ -685,7 +685,7 @@ HTML_TEMPLATE = '''
 
         .icon-image {
             width: 100%;
-            height: 280px;
+            height: 320px;
             object-fit: contain;
             margin-bottom: 12px;
         }
@@ -824,6 +824,7 @@ HTML_TEMPLATE = '''
         .footer-content {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 1fr);
             gap: 60px;
             max-width: 1400px;
             margin: 0 auto;
