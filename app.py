@@ -877,7 +877,7 @@ HTML_TEMPLATE = '''
             align-items: center;
             justify-content: center;
             top: 50%;
-            transform: translateY(-200%);
+            transform: translateY(-500%);
             border-radius: 50%;
             z-index: 10;
         }
