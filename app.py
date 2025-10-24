@@ -247,6 +247,7 @@ HTML_TEMPLATE = '''
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 40px;
         }
 
         .text-slide {
@@ -573,7 +574,6 @@ HTML_TEMPLATE = '''
 
         .athlete-image:hover {
             transform: scale(1.09);
-            opacity: 0.8;
         }
 
         .discover-grid {
@@ -908,62 +908,52 @@ HTML_TEMPLATE = '''
         }
 
         /* Footer - Responsive */
-            .footer-section {
+/* Footer - Responsive */
+        .footer-section {
             background-color: white;
-            padding: 40px 40px;
-            margin-top: 200px;
-            border-top: 1px solid #ccc;
+            padding: 40px 48px;
+            margin-top: 80px;
+        }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr) auto;
-            gap: 80px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            max-width: 100%;
+            margin: 0;
             margin-bottom: 40px;
+            gap: 150px;
+        }
+
+        .footer-column {
+            flex: 0 0 auto;
+            min-width: 200px;
         }
 
         .footer-location-column {
-            grid-column: 4;
-            grid-row: 1;
-            justify-self: end;
-        }
-        
-        .shop-tabs-container {
-                gap: 10px;
-                margin-top: 20px;
-                margin-bottom: 40px;
-            }
-            
-            .shop-tab-button {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+            margin-left: auto;
+            flex: 0 0 auto;
         }
 
         .footer-column-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            font-size: 10px;
+            font-weight: 500;
+            margin-bottom: 16px;
             color: black;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .footer-link {
             color: #7e7e7e;
             text-decoration: none;
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 12px;
+            margin-bottom: 12px;
             display: block;
+            line-height: 1.5;
         }
 
         .footer-link:hover {
             color: black;
-            text-decoration: underline;
         }
 
         .footer-location-column {
@@ -976,48 +966,62 @@ HTML_TEMPLATE = '''
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 14px;
+            font-size: 12px;
             color: black;
         }
 
         .location-icon {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
         }
+
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            padding-top: 20px;
-            margin-top: 40px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 12px;
+            padding-top: 0;
+            margin-top: 0;
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 11px;
             color: #7e7e7e;
         }
 
         .footer-bottom-left {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .footer-bottom-right {
             display: flex;
-            gap: 20px;
+            gap: 12px;
         }
 
         .footer-bottom-link {
             color: #7e7e7e;
             text-decoration: none;
+            font-size: 11px;
         }
 
         .footer-bottom-link:hover {
             color: black;
-            text-decoration: underline;
+        }
+
+        /* Mobile Responsive - Phone screens only */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-section {
+                padding: 40px 20px;
+            }
         }
 
         /* Popups - Responsive */
@@ -1528,10 +1532,10 @@ HTML_TEMPLATE = '''
     </div>
 
     <div class="text-slideshow-container">
-        {% for i in range(10) %}
-        <div class="text-slide{% if i == 0 %} text-active{% endif %}">INNOVATION MEETS STYLE</div>
+        {% for i in range(20) %}
+        <div class="text-slide{% if i == 0 %} text-active{% endif %}">THREADS, NO CAP</div>
         <div class="text-slide">UNLEASH YOUR POTENTIAL</div>
-        <div class="text-slide">MOVE THE WORLD FORWARD</div>
+        <div class="text-slide">THE DRIP SECTION</div>
         <div class="text-slide">WHERE CHAMPIONS ARE MADE</div>
         {% endfor %}
     </div>
