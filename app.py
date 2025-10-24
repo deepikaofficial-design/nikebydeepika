@@ -912,9 +912,9 @@ HTML_TEMPLATE = '''
 
         .footer-section {
             background-color: white;
-            padding: 200px 48px;
+            padding: 100px 48px;
             margin-top: 80px;
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid black;
         }
 
         .footer-content {
@@ -938,7 +938,7 @@ HTML_TEMPLATE = '''
 
         .footer-column-title {
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 500;
             margin-bottom: 16px;
             color: black;
             text-transform: uppercase;
