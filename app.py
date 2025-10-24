@@ -822,7 +822,7 @@ HTML_TEMPLATE = '''
             scroll-behavior: smooth;
             scrollbar-width: none;
             padding: 20px 0;
-            margin-bottom: 100px;
+            margin-bottom: 150px;
         }
 
         .nba-slider::-webkit-scrollbar {
