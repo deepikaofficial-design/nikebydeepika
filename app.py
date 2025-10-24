@@ -503,6 +503,11 @@ HTML_TEMPLATE = '''
             width: 100%;
             height: 300px;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .athlete-image:hover {
+            transform: scale(1.05);
         }
 
         .discover-grid {
@@ -527,11 +532,15 @@ HTML_TEMPLATE = '''
             gap: 10px;
             margin-bottom: 40px;
         }
-
         .featured-image {
             width: 100%;
             height: 500px;
             object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+
+        .featured-image:hover {
+            filter: brightness(1.15);
         }
 
         /* Shop Tabs for What's Hot Section */
@@ -605,6 +614,11 @@ HTML_TEMPLATE = '''
             height: 500px;
             object-fit: cover;
             margin-bottom: 12px;
+            transition: filter 0.3s ease;
+        }
+
+        .sports-image:hover {
+            filter: brightness(1.15);
         }
 
         .sports-text {
@@ -681,7 +695,7 @@ HTML_TEMPLATE = '''
 
         .icon-item {
             flex: 0 0 240px;
-            min-width: 380px;
+            min-width: 350px;
             cursor: pointer;
         }
 
@@ -690,6 +704,11 @@ HTML_TEMPLATE = '''
             height: 380px;
             object-fit: contain;
             margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-image:hover {
+            transform: scale(1.08);
         }
 
         .icons-slider-btn {
@@ -751,6 +770,11 @@ HTML_TEMPLATE = '''
             height: 320px;
             object-fit: cover;
             margin-bottom: 12px;
+            transition: filter 0.3s ease;
+        }
+
+        .nba-image:hover {
+            filter: brightness(1.15);
         }
 
         .nba-item-title {
@@ -823,10 +847,9 @@ HTML_TEMPLATE = '''
             margin-top: 200px;
             border-top: 1px solid #ccc;
 
-
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr) auto;
             gap: 80px;
             max-width: 1200px;
             margin: 0 auto;
@@ -836,6 +859,7 @@ HTML_TEMPLATE = '''
         .footer-location-column {
             grid-column: 4;
             grid-row: 1;
+            justify-self: end;
         }
         
         .shop-tabs-container {
@@ -1403,7 +1427,7 @@ HTML_TEMPLATE = '''
     </div>
     
     <div class="slideshow-container">
-        {% for i in range(10) %}
+        {% for i in range(100) %}
         <img src="/static/ssf3.avif" class="slide{% if i == 0 %} active{% endif %}" alt="Slide {{ i*3 + 1 }}">
         <video class="slide" muted playsinline preload="metadata">
             <source src="/static/slideshow2.mp4" type="video/mp4">
@@ -1550,7 +1574,7 @@ HTML_TEMPLATE = '''
             <button class="icons-slider-btn left" onclick="slideIconsLeft()">‹</button>
             <button class="icons-slider-btn right" onclick="slideIconsRight()">›</button>
 <div class="icons-slider" id="iconsSlider">
-                {% for j in range(25) %}
+                {% for j in range(100) %}
                 <a href="#airmax" class="icon-item" data-icon="Air Max" data-image="/static/airmax.png">
                     <img src="/static/airmax.png" alt="Air Max" class="icon-image">
                 </a>
@@ -2131,6 +2155,16 @@ HTML_TEMPLATE = '''
         const iconsSlider = document.getElementById('iconsSlider');
         if (iconsSlider) {
             iconsSlider.addEventListener('scroll', updateIconsSliderButtons);
+            
+            // Center to middle position on load
+            window.addEventListener('load', () => {
+                const totalItems = iconsSlider.querySelectorAll('.icon-item').length;
+                const itemWidth = iconsSlider.querySelector('.icon-item').offsetWidth + 15;
+                const middlePosition = Math.floor(totalItems / 2);
+                const scrollPosition = middlePosition * itemWidth - (iconsSlider.clientWidth / 2) + (itemWidth / 2);
+                iconsSlider.scrollLeft = scrollPosition;
+                updateIconsSliderButtons();
+            });
         }
 
         //NBA Slider//
