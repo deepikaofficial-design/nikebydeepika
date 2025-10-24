@@ -534,13 +534,19 @@ HTML_TEMPLATE = '''
         }
 
         /* Shop Tabs for What's Hot Section */
-        .shop-tabs-container {
+        .featured-image-wrapper {
+            position: relative;
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .featured-image-wrapper .shop-tab-button {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
         }
 
         .shop-tab-button {
@@ -1456,21 +1462,19 @@ HTML_TEMPLATE = '''
             <div class="featured-images-container">
                 <div class="featured-image-wrapper">
                     <img src="/static/hot.avif" alt="Featured 1" class="featured-image">
+                    <button class="shop-tab-button" onclick="window.location.href='/men'">Shop</button>
                 </div>
                 <div class="featured-image-wrapper">
                     <img src="/static/hot1.avif" alt="Featured 2" class="featured-image">
+                    <button class="shop-tab-button" onclick="window.location.href='/women'">Shop</button>
                 </div>
                 <div class="featured-image-wrapper">
                     <img src="/static/hot2.avif" alt="Featured 3" class="featured-image">
+                    <button class="shop-tab-button" onclick="window.location.href='/msports'">Shop</button>
                 </div>
                 <div class="featured-image-wrapper">
                     <img src="/static/hot3.avif" alt="Featured 4" class="featured-image">
-                </div>
-                <div class="shop-tabs-container">
-                <button class="shop-tab-button" onclick="window.location.href='/men'">Shop Men</button>
-                <button class="shop-tab-button" onclick="window.location.href='/women'">Shop Women</button>
-                <button class="shop-tab-button" onclick="window.location.href='/kids'">Shop Kids</button>
-                <button class="shop-tab-button" onclick="window.location.href='/new-featured'">Shop New</button>
+                    <button class="shop-tab-button" onclick="window.location.href='/wsports'">Shop</button>
                 </div>
             </div>
         </div>
