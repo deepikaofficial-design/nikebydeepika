@@ -562,7 +562,7 @@ HTML_TEMPLATE = '''
         }
 
         .shop-tab-button:hover {
-            background-color: #f0f0f0;
+            background-color:  #c0c0c0;
         }
 
         .gear-image {
@@ -600,7 +600,7 @@ HTML_TEMPLATE = '''
 
         .sports-image {
             width: 100%;
-            height: 600px;
+            height: 500px;
             object-fit: cover;
             margin-bottom: 12px;
         }
@@ -679,13 +679,13 @@ HTML_TEMPLATE = '''
 
         .icon-item {
             flex: 0 0 240px;
-            min-width: 240px;
+            min-width: 340px;
             cursor: pointer;
         }
 
         .icon-image {
             width: 100%;
-            height: 400px;
+            height: 320px;
             object-fit: contain;
             margin-bottom: 12px;
         }
@@ -820,15 +820,18 @@ HTML_TEMPLATE = '''
             padding: 40px 40px;
             margin-top: 200px;
             border-top: 1px solid #ccc;
-        }
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-            gap: 60px;
-            max-width: 1400px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            max-width: 1200px;
             margin: 0 auto;
             margin-bottom: 40px;
+        }
+
+        .footer-location-column {
+            grid-column: 3;
+            grid-row: 1;
         }
         
         .shop-tabs-container {
