@@ -329,7 +329,8 @@ HTML_TEMPLATE = '''
         }
 
         .shop-button:hover {
-            background-color: #f0f0f0;
+            background-color: black;
+            color: white;
         }
 
         /* Slideshow Controls */
@@ -362,7 +363,7 @@ HTML_TEMPLATE = '''
         }
 
         .slideshow-control-btn:hover {
-            background-color: #111;
+            background-color: black;
             transform: scale(1.02);
             box-shadow: none;
         }
@@ -562,7 +563,8 @@ HTML_TEMPLATE = '''
         }
 
         .shop-tab-button:hover {
-            background-color:  #c0c0c0;
+            background-color: black;
+            color: white;
         }
 
         .gear-image {
@@ -679,13 +681,13 @@ HTML_TEMPLATE = '''
 
         .icon-item {
             flex: 0 0 240px;
-            min-width: 340px;
+            min-width: 380px;
             cursor: pointer;
         }
 
         .icon-image {
             width: 100%;
-            height: 320px;
+            height: 380px;
             object-fit: contain;
             margin-bottom: 12px;
         }
@@ -820,9 +822,11 @@ HTML_TEMPLATE = '''
             padding: 40px 40px;
             margin-top: 200px;
             border-top: 1px solid #ccc;
+
+
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 80px;
             max-width: 1200px;
             margin: 0 auto;
@@ -830,7 +834,7 @@ HTML_TEMPLATE = '''
         }
 
         .footer-location-column {
-            grid-column: 3;
+            grid-column: 4;
             grid-row: 1;
         }
         
