@@ -555,7 +555,7 @@ HTML_TEMPLATE = '''
             padding: 12px 24px;
             border: none;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             border-radius: 50px;
             transition: all 0.3s ease;
@@ -656,7 +656,7 @@ HTML_TEMPLATE = '''
 
         .icons-slider {
             display: flex; 
-            gap: 20px;
+            gap: 15px;
             overflow-x: auto;
             scroll-behavior: smooth;
             scrollbar-width: none;
@@ -678,14 +678,14 @@ HTML_TEMPLATE = '''
         }
 
         .icon-item {
-            flex: 0 0 280px;
-            min-width: 80px;
+            flex: 0 0 240px;
+            min-width: 240px;
             cursor: pointer;
         }
 
         .icon-image {
-            width: 200px;
-            height: 400px;
+            width: 100%;
+            height: 280px;
             object-fit: contain;
             margin-bottom: 12px;
         }
@@ -823,7 +823,7 @@ HTML_TEMPLATE = '''
         }
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 60px;
             max-width: 1400px;
             margin: 0 auto;
@@ -867,19 +867,24 @@ HTML_TEMPLATE = '''
             text-decoration: underline;
         }
 
+        .footer-location-column {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
         .footer-location {
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
-            margin-top: 200px;
+            color: black;
         }
 
         .location-icon {
             width: 20px;
             height: 20px;
         }
-
         .footer-bottom {
             display: flex;
             justify-content: space-between;
@@ -887,10 +892,11 @@ HTML_TEMPLATE = '''
             flex-wrap: wrap;
             gap: 20px;
             padding-top: 20px;
-            border-top: 1px solid #e5e5e5;
+            margin-top: 40px;
             max-width: 1400px;
-            margin: 0 auto;
-            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 12px;
             color: #7e7e7e;
         }
 
@@ -1682,7 +1688,7 @@ HTML_TEMPLATE = '''
                 <a href="/delivery" class="footer-link">Delivery</a>
                 <a href="/returns" class="footer-link">Returns</a>
                 <a href="/payment-options" class="footer-link">Payment Options</a>
-                <a href="/contact-nike" class="footer-link">Contact Us On NikebyDeepika.com Inquiries</a>
+                <a href="/contact-nike" class="footer-link">Contact Us On Nike.com Inquiries</a>
                 <a href="/contact-other" class="footer-link">Contact Us On All Other Inquiries</a>
             </div>
             
@@ -1697,7 +1703,7 @@ HTML_TEMPLATE = '''
                 <a href="/report" class="footer-link">Report a Concern</a>
             </div>
             
-            <div class="footer-column">
+            <div class="footer-column footer-location-column">
                 <div class="footer-location">
                     <svg class="location-icon" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
