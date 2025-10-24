@@ -912,8 +912,8 @@ HTML_TEMPLATE = '''
 
         .footer-section {
             background-color: white;
-            padding: 100px 48px;
-            margin-top: 80px;
+            padding: 60px 48px 80px 48px;
+            margin-top: 120px;
             border-top: 1px solid black;
         }
 
@@ -937,7 +937,7 @@ HTML_TEMPLATE = '''
         }
 
         .footer-column-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             margin-bottom: 16px;
             color: black;
@@ -989,7 +989,7 @@ HTML_TEMPLATE = '''
             max-width: 100%;
             margin-left: 0;
             margin-right: 0;
-            font-size: 16px;
+            font-size: 14px;
             color: #7e7e7e;
         }
 
@@ -1008,7 +1008,7 @@ HTML_TEMPLATE = '''
         .footer-bottom-link {
             color: #7e7e7e;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .footer-bottom-link:hover {
