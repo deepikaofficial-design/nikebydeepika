@@ -247,7 +247,8 @@ HTML_TEMPLATE = '''
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 40px;
+            margin-top: 80px;
+            margin-bottom: 40px;
         }
 
         .text-slide {
@@ -259,7 +260,7 @@ HTML_TEMPLATE = '''
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
+            font-size: 70px;
             font-weight: bold;
             color: black;
             opacity: 0;
@@ -908,10 +909,10 @@ HTML_TEMPLATE = '''
         }
 
         /* Footer - Responsive */
-/* Footer - Responsive */
+
         .footer-section {
             background-color: white;
-            padding: 40px 48px;
+            padding: 100px 48px;
             margin-top: 80px;
         }
 
