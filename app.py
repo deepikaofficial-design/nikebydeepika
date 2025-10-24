@@ -912,8 +912,9 @@ HTML_TEMPLATE = '''
 
         .footer-section {
             background-color: white;
-            padding: 100px 48px;
+            padding: 200px 48px;
             margin-top: 80px;
+            border-top: 0.3px solid #e5e5e5;
         }
 
         .footer-content {
@@ -936,8 +937,8 @@ HTML_TEMPLATE = '''
         }
 
         .footer-column-title {
-            font-size: 10px;
-            font-weight: 500;
+            font-size: 17px;
+            font-weight: bold;
             margin-bottom: 16px;
             color: black;
             text-transform: uppercase;
@@ -987,7 +988,7 @@ HTML_TEMPLATE = '''
             max-width: 100%;
             margin-left: 0;
             margin-right: 0;
-            font-size: 11px;
+            font-size: 16px;
             color: #7e7e7e;
         }
 
@@ -1801,7 +1802,7 @@ HTML_TEMPLATE = '''
                 <a href="/delivery" class="footer-link">Delivery</a>
                 <a href="/returns" class="footer-link">Returns</a>
                 <a href="/payment-options" class="footer-link">Payment Options</a>
-                <a href="/contact-nike" class="footer-link">Contact Us On Nike.com Inquiries</a>
+                <a href="/contact-nike" class="footer-link">Contact Us On nikebydeepika.com Inquiries</a>
                 <a href="/contact-other" class="footer-link">Contact Us On All Other Inquiries</a>
             </div>
             
@@ -1828,11 +1829,11 @@ HTML_TEMPLATE = '''
         
         <div class="footer-bottom">
             <div class="footer-bottom-left">
-                <span>© 2025 Nike, Inc. All rights reserved</span>
+                <span>© 2025 Nikebydeepika Inc. All rights reserved</span>
                 <a href="/guides" class="footer-bottom-link">Guides</a>
                 <a href="/terms-of-sale" class="footer-bottom-link">Terms of Sale</a>
                 <a href="/terms-of-use" class="footer-bottom-link">Terms of Use</a>
-                <a href="/privacy-policy" class="footer-bottom-link">Nike Privacy Policy</a>
+                <a href="/privacy-policy" class="footer-bottom-link">Nikebydeepika Privacy Policy</a>
             </div>
             <div class="footer-bottom-right">
                 <a href="/privacy-settings" class="footer-bottom-link">Privaslidescy Settings</a>
