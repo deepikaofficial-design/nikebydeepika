@@ -926,11 +926,10 @@ padding (first value) to adjust space between the line and footer content
 
         .footer-section {
             background-color: white;
-            padding: 100px 48px 200px 48px;
-            margin-top: 180px;
+            padding: 200px 48px;
+            margin-top: 80px;
             border-top: 1px solid black;
         }
-
         .footer-content {
             display: flex;
             justify-content: flex-start;
