@@ -914,7 +914,7 @@ HTML_TEMPLATE = '''
             background-color: white;
             padding: 200px 48px;
             margin-top: 80px;
-            border-top: 0.3px solid #e5e5e5;
+            border-top: 1px solid #e5e5e5;
         }
 
         .footer-content {
@@ -937,7 +937,7 @@ HTML_TEMPLATE = '''
         }
 
         .footer-column-title {
-            font-size: 17px;
+            font-size: 14px;
             font-weight: bold;
             margin-bottom: 16px;
             color: black;
@@ -956,6 +956,7 @@ HTML_TEMPLATE = '''
 
         .footer-link:hover {
             color: black;
+            text-decoration: underline;
         }
 
         .footer-location-column {
@@ -1007,11 +1008,12 @@ HTML_TEMPLATE = '''
         .footer-bottom-link {
             color: #7e7e7e;
             text-decoration: none;
-            font-size: 11px;
+            font-size: 16px;
         }
 
         .footer-bottom-link:hover {
             color: black;
+            text-decoration: underline;
         }
 
         /* Mobile Responsive - Phone screens only */
