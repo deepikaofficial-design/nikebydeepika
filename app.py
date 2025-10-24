@@ -926,8 +926,8 @@ padding (first value) to adjust space between the line and footer content
 
         .footer-section {
             background-color: white;
-            padding: 200px 48px;
-            margin-top: 130px;
+            padding: 100px 48px 200px 48px;
+            margin-top: 180px;
             border-top: 1px solid black;
         }
 
