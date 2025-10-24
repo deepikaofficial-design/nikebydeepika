@@ -822,6 +822,7 @@ HTML_TEMPLATE = '''
             scroll-behavior: smooth;
             scrollbar-width: none;
             padding: 20px 0;
+            margin-bottom: 100px;
         }
 
         .nba-slider::-webkit-scrollbar {
@@ -910,24 +911,10 @@ HTML_TEMPLATE = '''
 
         /* Footer - Responsive */
 
-
-Untitled
-Text ∙ Version 2 
-I've restored your original footer section code. Now you can adjust:
-
-margin-top to move the line up or down from the NBA section
-padding (first value) to adjust space between the line and footer content
-
-
-
-
-
-
-
         .footer-section {
             background-color: white;
-            padding: 500px 48px;
-            margin-top: 200px;
+            padding: 60px 48px;
+            margin-top: 80px;
             border-top: 1px solid black;
         }
         .footer-content {
