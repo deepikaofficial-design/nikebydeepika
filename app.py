@@ -1422,7 +1422,7 @@ HTML_TEMPLATE = '''
     </div>
     
     <div class="slideshow-container">
-        {% for i in range(100) %}
+        {% for i in range(10) %}
         <img src="/static/ssf3.avif" class="slide{% if i == 0 %} active{% endif %}" alt="Slide {{ i*3 + 1 }}">
         <video class="slide" muted playsinline preload="metadata">
             <source src="/static/slideshow2.mp4" type="video/mp4">
@@ -1569,7 +1569,7 @@ HTML_TEMPLATE = '''
             <button class="icons-slider-btn left" onclick="slideIconsLeft()">‹</button>
             <button class="icons-slider-btn right" onclick="slideIconsRight()">›</button>
 <div class="icons-slider" id="iconsSlider">
-                {% for j in range(100) %}
+                {% for j in range(50) %}
                 <a href="#airmax" class="icon-item" data-icon="Air Max" data-image="/static/airmax.png">
                     <img src="/static/airmax.png" alt="Air Max" class="icon-image">
                 </a>
