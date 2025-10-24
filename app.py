@@ -1550,7 +1550,7 @@ HTML_TEMPLATE = '''
                     <img src="/static/metcon.png" alt="Metcon" class="icon-image">
                 </a>
                 <a href="P6000" class="icon-item" data-icon="P6000" data-image="/static/P6000.png">
-                    <img src="/static/P6000.png" alt="P6000" class="icon-image">
+                    <img src="/static/p.png" alt="P6000" class="icon-image">
                 </a>
                 {% endfor %}
             </div>
