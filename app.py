@@ -552,18 +552,17 @@ HTML_TEMPLATE = '''
         .shop-tab-button {
             background-color: white;
             color: black;
-            padding: 12px 28px;
-            border: 2px solid black;
+            padding: 12px 24px;
+            border: none;
             cursor: pointer;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             border-radius: 50px;
             transition: all 0.3s ease;
         }
 
         .shop-tab-button:hover {
-            background-color: black;
-            color: white;
+            background-color: #f0f0f0;
         }
 
         .gear-image {
@@ -687,7 +686,7 @@ HTML_TEMPLATE = '''
         .icon-image {
             width: 200px;
             height: 400px;
-            object-fit: cover;
+            object-fit: contain;
             margin-bottom: 12px;
         }
 
@@ -823,21 +822,30 @@ HTML_TEMPLATE = '''
             border-top: 1px solid #ccc;
         }
         .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        
-        .shop-tabs-container {
-            gap: 10px;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
             margin-bottom: 40px;
         }
         
-        .shop-tab-button {
-            padding: 10px 20px;
-            font-size: 13px;
+        .shop-tabs-container {
+                gap: 10px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+            
+            .shop-tab-button {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
-    }
 
         .footer-column-title {
             font-size: 16px;
