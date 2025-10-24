@@ -1537,10 +1537,10 @@ HTML_TEMPLATE = '''
 
     <div class="text-slideshow-container">
         {% for i in range(20) %}
-        <div class="text-slide{% if i == 0 %} text-active{% endif %}">THREADS, NO CAP</div>
-        <div class="text-slide">UNLEASH YOUR POTENTIAL</div>
-        <div class="text-slide">THE DRIP SECTION</div>
-        <div class="text-slide">WHERE CHAMPIONS ARE MADE</div>
+        <div class="text-slide{% if i == 0 %} text-active{% endif %}">THREADS, NO CAP.</div>
+        <div class="text-slide">UNLEASH YOUR POTENTIAL.</div>
+        <div class="text-slide">THE DRIP SECTION.</div>
+        <div class="text-slide">WHERE CHAMPIONS ARE MADE.</div>
         {% endfor %}
     </div>
 
