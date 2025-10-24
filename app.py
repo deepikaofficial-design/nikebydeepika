@@ -42,8 +42,8 @@ HTML_TEMPLATE = '''
         }
 
         .logo-container img {
-            width: 55px;
-            height: 35px;
+            width: 60px;
+            height: 40px;
         }
 
         .text-container {
@@ -235,6 +235,71 @@ HTML_TEMPLATE = '''
             font-size: 24px;
             cursor: pointer;
             color: black;
+        }
+
+        /* Text Slideshow Container */
+        .text-slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+            opacity: 0;
+            z-index: 0;
+        }
+
+        .text-slide:first-child {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .text-slide.text-active {
+            animation: textSlideInRight 0.4s ease-in-out forwards;
+            z-index: 2;
+        }
+
+        .text-slide.text-slide-out {
+            animation: textSlideOutLeft 0.4s ease-in-out forwards;
+            z-index: 1;
+        }
+
+        @keyframes textSlideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes textSlideOutLeft {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
         }
 
         /* Slideshow Container */
@@ -507,7 +572,8 @@ HTML_TEMPLATE = '''
         }
 
         .athlete-image:hover {
-            transform: scale(1.10);
+            transform: scale(1.09);
+            opacity: 0.8;
         }
 
         .discover-grid {
@@ -842,103 +908,116 @@ HTML_TEMPLATE = '''
         }
 
         /* Footer - Responsive */
-        .footer-section {
+            .footer-section {
             background-color: white;
-            color: white;
-            padding: 0 10px 40px 10px;
-            margin-top: 80px;
-            border-top: 0.3px solid #7A7777;
-        }
-        
+            padding: 40px 40px;
+            margin-top: 200px;
+            border-top: 1px solid #ccc;
+
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr) 50px;
-            gap: 5px;
+            grid-template-columns: repeat(3, 1fr) auto;
+            gap: 80px;
             max-width: 1200px;
-            margin: 0 10px;
-            margin-bottom: 20px;
-            margin-top: 15px;
-            font-weight: bold;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+
+        .footer-location-column {
+            grid-column: 4;
+            grid-row: 1;
+            justify-self: end;
         }
         
-        .footer-column {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .footer-column-title {
-            font-size: 5px;
-            font-weight: 500;
-            margin-bottom: 10px;
-            text-transform: capitalize;
-            letter-spacing: 0.1px;
-            color: black;
-            font-weight: bold;
+        .shop-tabs-container {
+                gap: 10px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
             
+            .shop-tab-button {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
         }
-        
+
+        .footer-column-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: black;
+        }
+
         .footer-link {
             color: #7e7e7e;
             text-decoration: none;
-            font-size: 5px;
-            margin-bottom: 3px;
-            transition: color 0.3s;
-            font-weight: bold;
-            
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
         }
-         .footer-link:hover {
-            text-decoration: underline;
+
+        .footer-link:hover {
             color: black;
+            text-decoration: underline;
         }
-      
-        
-        
+
+        .footer-location-column {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
         .footer-location {
             display: flex;
             align-items: center;
-            gap: 1px;
-            font-size: 5px;
-            color: white;
-            margin-top: 10px;
+            gap: 8px;
+            font-size: 14px;
+            color: black;
         }
-        
+
         .location-icon {
-            width: 12px;
-            height: 12px;
+            width: 20px;
+            height: 20px;
         }
-        
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 1px;
-            border-top: none;
-            max-width: 1200px;
-            margin: 0 10px;
-            font-size: 6px;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 20px;
+            margin-top: 40px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 12px;
             color: #7e7e7e;
-            font-weight: bold;
         }
-        
+
         .footer-bottom-left {
             display: flex;
             gap: 20px;
-            align-items: center;
+            flex-wrap: wrap;
         }
-        
+
         .footer-bottom-right {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
-        
+
         .footer-bottom-link {
             color: #7e7e7e;
             text-decoration: none;
-            transition: color 0.3s;
         }
-           .footer-bottom-link:hover {
-            text-decoration: underline;
+
+        .footer-bottom-link:hover {
             color: black;
+            text-decoration: underline;
         }
 
         /* Popups - Responsive */
@@ -1446,6 +1525,15 @@ HTML_TEMPLATE = '''
             </button>
         </div>
         <div class="slide-indicators" id="slideIndicators"></div>
+    </div>
+
+    <div class="text-slideshow-container">
+        {% for i in range(10) %}
+        <div class="text-slide{% if i == 0 %} text-active{% endif %}">INNOVATION MEETS STYLE</div>
+        <div class="text-slide">UNLEASH YOUR POTENTIAL</div>
+        <div class="text-slide">MOVE THE WORLD FORWARD</div>
+        <div class="text-slide">WHERE CHAMPIONS ARE MADE</div>
+        {% endfor %}
     </div>
 
     <div class="athlete-section">
@@ -2283,6 +2371,50 @@ HTML_TEMPLATE = '''
                     popup.classList.remove('active');
                 }
             });
+});
+
+        // Text Slideshow
+        let textCurrentIndex = 0;
+        const textSlides = document.querySelectorAll('.text-slide');
+        const textTotalSlides = textSlides.length;
+        let textSlideTimeout;
+
+        function showTextSlide(index) {
+            const prevIndex = textCurrentIndex;
+            
+            if (index >= textTotalSlides) {
+                textCurrentIndex = 0;
+            } else if (index < 0) {
+                textCurrentIndex = textTotalSlides - 1;
+            } else {
+                textCurrentIndex = index;
+            }
+            
+            textSlides.forEach((slide, idx) => {
+                slide.classList.remove('text-active', 'text-slide-out');
+                slide.style.zIndex = '0';
+                slide.style.opacity = '0';
+            });
+            
+            if (prevIndex !== textCurrentIndex) {
+                const prevSlide = textSlides[prevIndex];
+                prevSlide.classList.add('text-slide-out');
+                prevSlide.style.zIndex = '1';
+            }
+            
+            const currentSlide = textSlides[textCurrentIndex];
+            currentSlide.classList.add('text-active');
+            currentSlide.style.zIndex = '2';
+            currentSlide.style.opacity = '1';
+            
+            textSlideTimeout = setTimeout(() => {
+                textCurrentIndex++;
+                showTextSlide(textCurrentIndex);
+            }, 5000);
+        }
+
+        window.addEventListener('load', () => {
+            showTextSlide(0);
         });
     </script>
 </body>
