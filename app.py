@@ -55,14 +55,20 @@ HTML_TEMPLATE = '''
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            z-index: 1;
         }
-
+        
+        .mobile-menu-icon {
+            display: none !important;
+        }
         .top-right-menu {
             display: flex;
             align-items: center;
             gap: 15px;
             font-size: 12px;
             color: white;
+            position: relative;
+            z-index: 10;
         }
 
         .top-right-menu a {
