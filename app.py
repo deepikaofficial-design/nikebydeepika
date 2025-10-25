@@ -1071,44 +1071,34 @@ HTML_TEMPLATE = '''
                 display: none !important;
             }
             
-.top-right-menu {
-                display: none !important;
-            }
-            
             /* Hamburger Menu Icon for Mobile */
             .mobile-menu-icon {
-                display: none;
+                display: flex !important;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 22px;
+                background-color: white;
+                padding: 4px;
+                border-radius: 4px;
+                cursor: pointer;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
             }
             
-            @media (max-width: 768px) {
-                .mobile-menu-icon {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    width: 30px;
-                    height: 22px;
-                    background-color: white;
-                    padding: 4px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    position: absolute;
-                    right: 15px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                
-                .mobile-menu-icon span {
-                    width: 100%;
-                    height: 3px;
-                    background-color: black;
-                    border-radius: 2px;
-                }
+            .mobile-menu-icon span {
+                width: 100%;
+                height: 3px;
+                background-color: black;
+                border-radius: 2px;
             }
 
             /* Slideshow mobile - keep consistent height */
             .slideshow-container {
-                height: 60vh;
-                max-height: 600px;
+                height: 40vh;
+                max-height: 400px;
                 margin-top: 10px;
             }
 
@@ -1132,7 +1122,7 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 100px;
+                margin-top: 1000px;
                 padding: 0 20px;
             }
             
