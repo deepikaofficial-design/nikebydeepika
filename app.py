@@ -513,9 +513,23 @@ HTML_TEMPLATE = '''
 
         /* Content Wrapper - Responsive */
         .content-wrapper {
-            padding: 0 40px;
-            max-width: 1400px;
-            margin: 0 auto;
+                padding: 0 20px;
+            }
+        
+        .athlete-image {
+            height: 200px;
+        }
+            
+            /* Featured (What's Hot) images - prevent trimming */
+        .featured-images-container {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+            
+        .featured-image {
+            height: 400px;
+            object-fit: contain;
+            background-color: #f5f5f5;
         }
 
         /* Sections - Responsive Typography */
@@ -1097,8 +1111,8 @@ HTML_TEMPLATE = '''
 
             /* Slideshow mobile - keep consistent height */
             .slideshow-container {
-                height: 40vh;
-                max-height: 400px;
+                height: 30vh;
+                max-height: 300px;
                 margin-top: 10px;
             }
 
@@ -1122,7 +1136,7 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 1000px;
+                margin-top: 100px;
                 padding: 0 20px;
             }
             
@@ -1140,7 +1154,7 @@ HTML_TEMPLATE = '''
             }
             
             .text-slide {
-                font-size: 32px;
+                font-size: 28px;
                 white-space: nowrap;
                 padding: 0 10px;
             }
