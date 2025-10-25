@@ -523,7 +523,7 @@ HTML_TEMPLATE = '''
             }
         
         .athlete-image {
-            height: 250px;
+            height: 180px;
         }
             
             /* Featured (What's Hot) images - prevent trimming */
@@ -751,11 +751,17 @@ HTML_TEMPLATE = '''
             right: 20px;
         }
 
-        /* Icons Slider - Infinite Loop */
         .icons-slider-container {
             position: relative;
             overflow: hidden;
             margin-bottom: 80px;
+        }
+
+        /* Mobile only - reduce icons container margin */
+        @media (max-width: 768px) {
+            .icons-slider-container {
+                margin-bottom: 15px;
+            }
         }
 
         .icons-slider {
@@ -1194,10 +1200,15 @@ HTML_TEMPLATE = '''
             }
             
             .athlete-title, .features-title, .gear-title, 
-            .sports-title, .discover-title, .nba-section-title,
-            .select-icons-title {
+            .sports-title, .discover-title, .nba-section-title {
                 font-size: 24px;
                 margin: 40px 0 20px 0;
+                font-weight: normal;
+            }
+            
+            .select-icons-title {
+                font-size: 24px;
+                margin: 15px 0 15px 0;
                 font-weight: normal;
             }
             
@@ -1219,17 +1230,21 @@ HTML_TEMPLATE = '''
             }
             
             .icon-image {
-                margin-bottom: 8px;
+                margin-bottom: 0px;
             }
             
             .icons-slider {
-                padding: 15px 0;
+                padding: 0px 0;
             }
             
             .slider-btn, .nba-slider-btn {
                 width: 45px;
                 height: 45px;
                 font-size: 32px;
+            }
+            
+            .icons-slider-container {
+                margin-bottom: 15px;
             }
             
             .footer-content {
