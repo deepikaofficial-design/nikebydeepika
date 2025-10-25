@@ -523,7 +523,7 @@ HTML_TEMPLATE = '''
             }
         
         .athlete-image {
-            height: 120px;
+            height: 250px;
         }
             
             /* Featured (What's Hot) images - prevent trimming */
@@ -1145,7 +1145,7 @@ HTML_TEMPLATE = '''
                 justify-content: center;
                 gap: 10px;
                 margin-top: 270px;
-                margin-bottom: 20px
+                margin-bottom: 20px;
                 padding: 0 20px;
             }
             
@@ -1190,55 +1190,46 @@ HTML_TEMPLATE = '''
             }
             
             .content-wrapper {
-                padding: 0 20px;
+                padding: 0 15px;
             }
             
             .athlete-title, .features-title, .gear-title, 
             .sports-title, .discover-title, .nba-section-title,
             .select-icons-title {
-                font-size: 20px;
-                margin: 50px 0 15px 0;
+                font-size: 24px;
+                margin: 40px 0 20px 0;
                 font-weight: normal;
             }
             
             .featured-main-title {
-                font-size: 25px;
+                font-size: 28px;
             }
             
             .featured-subtitle {
-                font-size: 20px;
+                font-size: 22px;
             }
             
             .sports-item, .icon-item, .nba-item {
-                min-width: 200px;
+                min-width: 240px;
             }
             
             .sports-image {
-                height: 350px;
-                object-fit: contain;
-                background-color: #f5f5f5;
+                height: 400px;
+                object-fit: cover;
             }
             
             .icon-image {
-                margin-bottom: 0px;
+                margin-bottom: 8px;
             }
             
             .icons-slider {
-                padding: 5px 0;
-            }
-            
-            .select-icons-title {
-                margin: 10px 0 5px 0;
-            }
-
-            .nba-section-title {
-                margin: 30px 0 15px 0;
+                padding: 15px 0;
             }
             
             .slider-btn, .nba-slider-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 28px;
+                width: 45px;
+                height: 45px;
+                font-size: 32px;
             }
             
             .footer-content {
