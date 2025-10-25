@@ -1068,8 +1068,24 @@ HTML_TEMPLATE = '''
             }
             
             .top-right-menu {
-                font-size: 9px;
-                gap: 8px;
+                display: none !important;
+            }
+            
+            /* Hamburger Menu Icon for Mobile */
+            .header-container::after {
+                content: '';
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 0 0 0 8px white,
+                            0 10px 0 8px black,
+                            0 20px 0 8px black;
             }
 
             /* Slideshow mobile - keep consistent height */
@@ -1090,9 +1106,36 @@ HTML_TEMPLATE = '''
                 object-fit: cover;
             }
 
-            /* Hide slideshow controls on mobile */
+            
+            /* Show slideshow controls below slideshow on mobile */
             .slideshow-controls {
-                display: none;
+                position: relative;
+                bottom: auto;
+                right: auto;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 15px;
+                padding: 0 20px;
+            }
+            
+            .slideshow-control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            /* Text slideshow adjustments for mobile */
+            .text-slideshow-container {
+                height: 80px;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            
+            .text-slide {
+                font-size: 32px;
+                white-space: nowrap;
+                padding: 0 10px;
             }
             
             .nav-menu {
