@@ -1111,7 +1111,7 @@ HTML_TEMPLATE = '''
             .mobile-menu-icon span {
                 width: 100%;
                 height: 3px;
-                color: black;
+                color: white;
                 border-radius: 2px;
             }
 
@@ -1119,7 +1119,7 @@ HTML_TEMPLATE = '''
             .slideshow-container {
                 height: 30vh;
                 max-height: 300px;
-                margin-top: 10px;
+                margin-top: 200px;
             }
 
             .slide {
