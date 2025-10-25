@@ -1208,7 +1208,7 @@ HTML_TEMPLATE = '''
             
             .select-icons-title {
                 font-size: 24px;
-                margin: 15px 0 15px 0;
+                margin: 8px 0 8px 0;
                 font-weight: normal;
             }
             
@@ -2264,8 +2264,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('sportsSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.sports-item').offsetWidth + 8;
-                slider.scrollLeft -= itemWidth;
-                updateSliderButtons();
+                slider.scrollBy({
+                    left: -itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateSliderButtons, 300);
             }
         }
 
@@ -2273,17 +2276,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('sportsSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.sports-item').offsetWidth + 8;
-                slider.scrollLeft += itemWidth;
-                updateSliderButtons();
-            }
-        }
-
-        function slideRight() {
-            const slider = document.getElementById('sportsSlider');
-            if (slider) {
-                const itemWidth = document.querySelector('.sports-item').offsetWidth + 8;
-                slider.scrollLeft += itemWidth * 3;
-                updateSliderButtons();
+                slider.scrollBy({
+                    left: itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateSliderButtons, 300);
             }
         }
 
@@ -2317,8 +2314,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('iconsSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.icon-item').offsetWidth + 15;
-                slider.scrollLeft -= itemWidth;
-                updateIconsSliderButtons();
+                slider.scrollBy({
+                    left: -itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateIconsSliderButtons, 300);
             }
         }
 
@@ -2326,8 +2326,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('iconsSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.icon-item').offsetWidth + 15;
-                slider.scrollLeft += itemWidth;
-                updateIconsSliderButtons();
+                slider.scrollBy({
+                    left: itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateIconsSliderButtons, 300);
             }
         }
 
@@ -2371,8 +2374,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('nbaSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.nba-item').offsetWidth + 15;
-                slider.scrollLeft -= itemWidth;
-                updateNbaSliderButtons();
+                slider.scrollBy({
+                    left: -itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateNbaSliderButtons, 300);
             }
         }
 
@@ -2380,8 +2386,11 @@ HTML_TEMPLATE = '''
             const slider = document.getElementById('nbaSlider');
             if (slider) {
                 const itemWidth = document.querySelector('.nba-item').offsetWidth + 15;
-                slider.scrollLeft += itemWidth;
-                updateNbaSliderButtons();
+                slider.scrollBy({
+                    left: itemWidth,
+                    behavior: 'smooth'
+                });
+                setTimeout(updateNbaSliderButtons, 300);
             }
         }
 
