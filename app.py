@@ -762,6 +762,17 @@ HTML_TEMPLATE = '''
             .icons-slider-container {
                 margin-bottom: 15px;
             }
+
+            .icons-slider-container {
+                margin-bottom: 15px;
+            }
+    
+            /* Featured images - make fully visible on mobile */
+            .featured-image {
+                height: auto !important;
+                width: 100% !important;
+                object-fit: contain !important;
+            }
         }
 
         .icons-slider {
@@ -1092,6 +1103,20 @@ HTML_TEMPLATE = '''
                 font-size: 10px;
                 letter-spacing: 1px;
             }
+
+            .text-container {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+    
+            /* Reduce athlete image height on mobile */
+            .athlete-image {
+                height: 250px !important;
+            }
+            
+            .athlete-images-container {
+                gap: 10px;
+            }
             
             .top-right-menu {
                 display: none !important;
@@ -1169,7 +1194,7 @@ HTML_TEMPLATE = '''
             }
             
             .text-slide {
-                font-size: 24px;
+                font-size: 22px;
                 white-space: nowrap;
                 padding: 0 10px;
             }
