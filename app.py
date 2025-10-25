@@ -1945,7 +1945,7 @@ HTML_TEMPLATE = '''
                 }
                 // Handle image slides
                 else {
-                    const imageDuration = 5000;
+                    const imageDuration = 4000;
                     slideTimeout = setTimeout(() => {
                         if (!isPaused) {
                             nextSlideAuto();
