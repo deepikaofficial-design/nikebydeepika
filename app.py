@@ -1099,6 +1099,7 @@ HTML_TEMPLATE = '''
                 width: 30px;
                 height: 22px;
                 background-color: black;
+                color: white;
                 padding: 4px;
                 border-radius: 4px;
                 cursor: pointer;
@@ -1113,6 +1114,7 @@ HTML_TEMPLATE = '''
                 height: 3px;
                 background-color: black;
                 border-radius: 2px;
+                color: white;
             }
 
             /* Slideshow mobile - keep consistent height */
@@ -1142,7 +1144,8 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 300px;
+                margin-top: 270px;
+                margin-bottom: 20px
                 padding: 0 20px;
             }
             
