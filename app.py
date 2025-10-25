@@ -523,7 +523,7 @@ HTML_TEMPLATE = '''
             }
         
         .athlete-image {
-            height: 200px;
+            height: 120px;
         }
             
             /* Featured (What's Hot) images - prevent trimming */
@@ -1142,8 +1142,7 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 100px;
-                margin-bottom: 20px;
+                margin-top: 300px;
                 padding: 0 20px;
             }
             
@@ -1161,7 +1160,7 @@ HTML_TEMPLATE = '''
             }
             
             .text-slide {
-                font-size: 28px;
+                font-size: 24px;
                 white-space: nowrap;
                 padding: 0 10px;
             }
@@ -1211,16 +1210,26 @@ HTML_TEMPLATE = '''
                 min-width: 200px;
             }
             
+            .sports-image {
+                height: 350px;
+                object-fit: contain;
+                background-color: #f5f5f5;
+            }
+            
             .icon-image {
-                margin-bottom: 5px;
+                margin-bottom: 0px;
             }
             
             .icons-slider {
-                padding: 10px 0;
+                padding: 5px 0;
             }
             
             .select-icons-title {
-                margin: 30px 0 10px 0;
+                margin: 10px 0 5px 0;
+            }
+
+            .nba-section-title {
+                margin: 30px 0 15px 0;
             }
             
             .slider-btn, .nba-slider-btn {
