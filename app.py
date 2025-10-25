@@ -1071,21 +1071,38 @@ HTML_TEMPLATE = '''
                 display: none !important;
             }
             
+.top-right-menu {
+                display: none !important;
+            }
+            
             /* Hamburger Menu Icon for Mobile */
-            .header-container::after {
-                content: '';
-                position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 30px;
-                background-color: white;
-                border-radius: 4px;
-                cursor: pointer;
-                box-shadow: 0 0 0 8px white,
-                            0 10px 0 8px black,
-                            0 20px 0 8px black;
+            .mobile-menu-icon {
+                display: none;
+            }
+            
+            @media (max-width: 768px) {
+                .mobile-menu-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30px;
+                    height: 22px;
+                    background-color: white;
+                    padding: 4px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                
+                .mobile-menu-icon span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: black;
+                    border-radius: 2px;
+                }
             }
 
             /* Slideshow mobile - keep consistent height */
@@ -1115,7 +1132,7 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 15px;
+                margin-top: 100px;
                 padding: 0 20px;
             }
             
@@ -1210,6 +1227,11 @@ HTML_TEMPLATE = '''
             <a href="/join">Join Us</a>
             <span class="separator">|</span>
             <a href="/signin">Sign In</a>
+        </div>
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
     
