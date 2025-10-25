@@ -1098,20 +1098,20 @@ HTML_TEMPLATE = '''
                 justify-content: space-between;
                 width: 30px;
                 height: 22px;
-                background-color: white;
+                color: white;
                 padding: 4px;
                 border-radius: 4px;
                 cursor: pointer;
-                position: absolute;
+                position: fixed;
                 right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 10px;
+                z-index: 1000;
             }
             
             .mobile-menu-icon span {
                 width: 100%;
                 height: 3px;
-                background-color: black;
+                color: black;
                 border-radius: 2px;
             }
 
@@ -1142,7 +1142,8 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 100px;
+                margin-top: 15px;
+                margin-bottom: 20px;
                 padding: 0 20px;
             }
             
@@ -1208,6 +1209,18 @@ HTML_TEMPLATE = '''
             
             .sports-item, .icon-item, .nba-item {
                 min-width: 200px;
+            }
+            
+            .icon-image {
+                margin-bottom: 5px;
+            }
+            
+            .icons-slider {
+                padding: 10px 0;
+            }
+            
+            .select-icons-title {
+                margin: 30px 0 10px 0;
             }
             
             .slider-btn, .nba-slider-btn {
