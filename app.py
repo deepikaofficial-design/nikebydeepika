@@ -1098,7 +1098,7 @@ HTML_TEMPLATE = '''
                 justify-content: space-between;
                 width: 30px;
                 height: 22px;
-                color: white;
+                background-color: black;
                 padding: 4px;
                 border-radius: 4px;
                 cursor: pointer;
@@ -1111,7 +1111,7 @@ HTML_TEMPLATE = '''
             .mobile-menu-icon span {
                 width: 100%;
                 height: 3px;
-                color: white;
+                background-color: black;
                 border-radius: 2px;
             }
 
@@ -1119,7 +1119,7 @@ HTML_TEMPLATE = '''
             .slideshow-container {
                 height: 30vh;
                 max-height: 300px;
-                margin-top: 200px;
+                margin-top: 5px;
             }
 
             .slide {
@@ -1142,7 +1142,7 @@ HTML_TEMPLATE = '''
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-top: 15px;
+                margin-top: 100px;
                 margin-bottom: 20px;
                 padding: 0 20px;
             }
